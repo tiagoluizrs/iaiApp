@@ -5,6 +5,12 @@ O foco do aplicativo será permitir que usuários possam gerenciar seus projetos
 
 Para o desenvolvimento da Aplicação foram utilizadas as seguintes tecnologias:
 
+-AngularJs;
+-IonicFramework;
+-ionicMaterial;
+-NodeJs;
+-Apache Cordova;
+
 ![alt text](www/img/adobe.png "Teste de Imagem")
 
 Abaixo está uma breve amostra do layout do aplicativo, que já pode ser baixado através do link: 
