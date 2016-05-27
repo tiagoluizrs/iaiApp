@@ -1,0 +1,32 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content style="background: url(img/login-bg.jpg) center; background-size: cover;">
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>Iai Tá Pronto?</h1>
+            </div>
+        </div>
+        <div class="list">
+            <ion-md-input ng-model="user.email" placeholder="E-mail" id="email" highlight-color="balanced" type="email"></ion-md-input>
+            <ion-md-input ng-model="user.password" placeholder="Senha" id="password" highlight-color="energized" type="password"></ion-md-input>
+        </div>
+        <div class="login-button padding">
+        <!-- ui-sref="app.profile"  -->
+            <button type="button" class="button button-full button-assertive ink button-login" ng-click="submit(user)">Entrar</button>
+        </div>
+        <div ng-hide="preloaderUser" class="pre-loader-body">
+            <div class="rotate-pre">
+                <i class="icon ion-load-c icon-preloader"></i>
+            </div>
+            <br>
+            <span class="body-text">
+                <p ng-hide="contaUser">Verificando Usuário</p>
+                <p ng-hide="instante">Aguarde um Instante</p>
+                <p ng-hide="contaSync">Sincronizando sua conta</p>
+                <p ng-hide="contaError">Erro ao Efetuar Sincronização</p>
+                <p ng-hide="contaInvalid">Usuário Inexistente</p>
+                <p ng-hide="contaInactive">Usuário Inativo</p>
+            </span>
+        </div>
+    </ion-content>
+</ion-view>

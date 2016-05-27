@@ -1,0 +1,32 @@
+<ion-view view-title="{{profile}}">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/login-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/profile.jpg');"></div>
+                <h3><a class="light profile-link">{{userName}}</a></h3>
+                <h4 class="role-name" >Gerente de Projetos</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.projects" class="tab-item">
+                <i class="icon ion-filing"></i> {{projects}}
+            </a>
+            <a ui-sref="app.tasks" class="tab-item">
+                <i class="icon ion-clipboard"></i> {{tasks}}
+            </a>
+            <a ui-sref="app.updates" class="tab-item">
+                <i class="icon ion-person-stalker"></i> {{updates}}
+            </a>
+        </div>
+ 
+        <h4 class="content padding double-padding-x">{{latests}} {{projects}}</h4>
+        <div class="list animate-fade-slide-in-right">
+            <a ng-repeat="project in projectsItem" ui-sref="app.project/{{project.id}}" class="item item-avatar item-icon-right">
+                <img src="img/{{project.image}}">
+                <h2>{{project.title}}</h2>
+                <p>{{project.date | date}}</p>
+                <i class="icon ion-android-time"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

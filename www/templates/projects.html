@@ -1,0 +1,15 @@
+<ion-view view-title="{{projects}}" class="bg-office ">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="content has-header">
+         <!--  animate-fade-slide-in-right -->
+            <div class="list">
+                <a ng-repeat="project in projectsItem" ui-sref="app.project/{{project.id}}" class="item item-avatar item-icon-right">
+                    <img src="img/{{project.image}}">
+                    <h2>{{project.title}}</h2>
+                    <p>{{project.date | date}}</p>
+                    <i class="icon ion-android-time"></i>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
