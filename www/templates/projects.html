@@ -3,12 +3,21 @@
         <div class="content has-header">
          <!--  animate-fade-slide-in-right -->
             <div class="list">
-                <a ng-repeat="project in projectsItem" ui-sref="app.project/{{project.id}}" class="item item-avatar item-icon-right">
-                    <img src="img/{{project.image}}">
-                    <h2>{{project.title}}</h2>
-                    <p>{{project.date | date}}</p>
-                    <i class="icon ion-android-time"></i>
-                </a>
+                <div class="item card-item" ng-repeat="project in projectsItem">
+                    <div ui-sref="app.project/{{project.id}}" class="card stable-bg ink ink-dark">
+                        <div class="item item-avatar item-text-wrap">
+                            <span class="avatar" style="background-image: url('img/{{project.image}}');"></span>
+                            <strong>{{project.title}}</strong> ...
+<!--                             <a class="image" ng-repeat="asset in assets"><img src="img/{{asset.assetSing}}">
+                            </a>
+ -->                            <div class="card-footer text-right">
+                                <div class="pull-left">
+                                    <i class="icon ion-android-time"></i> {{project.date | date}}  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </ion-content>

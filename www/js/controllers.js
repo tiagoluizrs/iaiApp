@@ -9,14 +9,6 @@ angular.module('starter.controllers', [])
     $scope.isExpanded = false;
     $scope.hasHeaderFabLeft = false;
     $scope.hasHeaderFabRight = false;
-    // Variáveis
-    $scope.profile = factoryGeneral.profile;
-    $scope.projects = factoryGeneral.projects;
-    $scope.tasks = factoryGeneral.tasks;
-    $scope.updates = factoryGeneral.updates;
-    $scope.latests = factoryGeneral.latests;
-    $scope.logoutL = factoryGeneral.logoutL;
-
 
     var navIcons = document.getElementsByClassName('ion-navicon');
     for (var i = 0; i < navIcons.length; i++) {
@@ -176,7 +168,20 @@ angular.module('starter.controllers', [])
                 });
         }
     };
-    
+
+    // Variáveis
+    $scope.profile = factoryGeneral.profile;
+    $scope.projects = factoryGeneral.projects;
+    $scope.tasks = factoryGeneral.tasks;
+    $scope.updates = factoryGeneral.updates;
+    $scope.latests = factoryGeneral.latests;
+    $scope.logoutL = factoryGeneral.logoutL;
+    if($localStorage.user){
+        console.log($localStorage.user);
+        $scope.userId = $localStorage.user.id;
+        $scope.userName = $localStorage.user.nome;
+        $scope.isLoggedIn = $localStorage.isLoggedIn;
+    }
 })
 
 .controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk, $ionicSideMenuDelegate, $location, factoryGeneral) {
@@ -199,13 +204,6 @@ angular.module('starter.controllers', [])
     $scope.$parent.setHeaderFab(false);
     $ionicNavBarDelegate.showBackButton(false);
 
-    
-    if($localStorage.user){
-        console.log($localStorage.user);
-        $scope.userId = $localStorage.user.id;
-        $scope.userName = $localStorage.user.nome;
-        $scope.isLoggedIn = $localStorage.isLoggedIn;
-    }
     // Arrastar ou não do Menu
     $ionicSideMenuDelegate.canDragContent(true);
     // Set Motion
@@ -256,11 +254,12 @@ angular.module('starter.controllers', [])
     $scope.tasks = factoryGeneral.tasks;
     $scope.updates = factoryGeneral.updates;
     $scope.latests = factoryGeneral.latests;
-
-    // $http.get('http://upwsites.com.br/system/UserApp?email=tiago@gmail.com&password=123')
-    // .success(function(response){
-    //     $scope.teste = response[2][0].titulo;
-    // });
+    if($localStorage.user){
+        console.log($localStorage.user);
+        $scope.userId = $localStorage.user.id;
+        $scope.userName = $localStorage.user.nome;
+        $scope.isLoggedIn = $localStorage.isLoggedIn;
+    }
 })
 
 .controller('ProjectsCtrl', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, $ionicSideMenuDelegate, $ionicNavBarDelegate, factoryGeneral) {
