@@ -11,8 +11,4 @@ Para o desenvolvimento da Aplicação foram utilizadas as seguintes tecnologias:
 - NodeJs;
 - Apache Cordova;
 
-##Abaixo está uma breve amostra do layout do aplicativo, que já pode ser baixado através do link:##
-
-Como ainda está em desenvolvimento o aplicativo não possui tela de cadastro, apenas de login, para entrar use: **Usuário: usuario@email.com | Senha: 123**
-
 ![alt text](screenshots/screen.jpg "Telas do Sistema")
