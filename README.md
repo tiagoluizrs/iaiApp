@@ -5,11 +5,11 @@ O foco do aplicativo será permitir que usuários possam gerenciar seus projetos
 
 Para o desenvolvimento da Aplicação foram utilizadas as seguintes tecnologias:
 
--AngularJs;
--IonicFramework;
--ionicMaterial;
--NodeJs;
--Apache Cordova;
+- AngularJs;
+- IonicFramework;
+- ionicMaterial;
+- NodeJs;
+- Apache Cordova;
 
 ![alt text](www/img/adobe.png "Teste de Imagem")
 
